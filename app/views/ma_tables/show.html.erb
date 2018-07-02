@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ma_table.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @ma_table.age %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ma_table.description %>
+</p>
+
+<%= link_to 'Edit', edit_ma_table_path(@ma_table) %> |
+<%= link_to 'Back', ma_tables_path %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ma Tables</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ma_tables.each do |ma_table| %>
+      <tr>
+        <td><%= ma_table.name %></td>
+        <td><%= ma_table.age %></td>
+        <td><%= ma_table.description %></td>
+        <td><%= link_to 'Show', ma_table %></td>
+        <td><%= link_to 'Edit', edit_ma_table_path(ma_table) %></td>
+        <td><%= link_to 'Destroy', ma_table, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ma Table', new_ma_table_path %>
